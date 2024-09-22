@@ -1,3 +1,498 @@
+/* --- SITE HEADER --- */
+:root {
+  --white-color: #ffffff;
+  --accent-color: #ff6c00;
+  --first-title-color: #9da4bd99;
+  --main-text-color: #555555;
+  --second-text-color: #303030;
+  --numbers-bgc-color: #f7f7f7;
+}
+
 body {
+  background-color: teal;
   font-family: "Open Sans", sans-serif;
+}
+
+/* --- HEADER --- */
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* padding-right: 17px; */
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  /* outline: 1px solid black; */
+}
+
+.header-wrap {
+  display: flex;
+  align-items: center;
+  padding-right: 17px;
+}
+
+.header-logo {
+  margin-right: 131px;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  margin-right: 250px;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.nav-link,
+.tel-link {
+  color: var(--white-color);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+}
+
+.tel-link {
+  margin-right: 40px;
+}
+
+.booking-btn {
+  /* width: 164px; */
+  padding: 10px 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+
+  color: var(--white-color);
+  background-color: transparent;
+  text-transform: uppercase;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+}
+
+.booking-btn:hover {
+  background-color: var(--accent-color);
+}
+
+.social-links {
+  color: var(--second-text-color);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+}
+
+.social-links:hover {
+  color: var(--accent-color);
+}
+
+/* --- HERO --- */
+
+.hero-section {
+  padding-top: 152px;
+  padding-bottom: 40px;
+}
+
+.hero-cont {
+  padding-right: 15px;
+}
+
+.hero-list {
+  display: flex;
+  gap: 40px;
+}
+
+.pre-hero-title,
+.about-pre-title,
+.services-pre-title,
+.perks-pre-title,
+.barbers-pre-title,
+.contacts-hours {
+  color: var(--first-title-color);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  color: var(--white-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 72px;
+  line-height: calc(85 / 72);
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+.hero-post-title,
+.contacts-hours-text {
+  color: var(--first-title-color);
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+}
+
+.slider-list {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-end;
+  margin-top: 144px;
+}
+
+.slider-btn {
+  width: 60px;
+  background-color: transparent;
+  padding: 0 0 8px 0;
+  border: none;
+  border-bottom: 1px solid var(--first-title-color);
+
+  color: var(--first-title-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+
+.forward {
+  text-align: right;
+}
+
+.slider-btn:hover {
+  color: var(--white-color);
+  border-color: var(--white-color);
+}
+
+/* --- ABOUT --- */
+.about {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.cont-about {
+  padding-right: 100px;
+}
+
+.about-flex-wrap {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
+.about-item {
+  width: 270px;
+}
+
+.about-pre-title,
+.perks-pre-title {
+  color: var(--second-text-color);
+}
+
+.about-title,
+.services-title,
+.perks-title,
+.booking-title,
+.contacts-title {
+  color: var(--second-text-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  line-height: calc(50 / 42);
+  letter-spacing: 0.05em;
+}
+
+.about-title,
+.perks-title {
+  margin-bottom: 20px;
+}
+
+.about-post-title {
+  margin-bottom: 20px;
+}
+
+.about-post-title,
+.perks-post-title {
+  color: var(--main-text-color);
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.about-text {
+  color: var(--main-text-color);
+
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
+}
+
+.about-btn {
+  color: var(--second-text-color);
+}
+
+/* --- SERVICES AND PRICES --- */
+
+.services {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* .services-pre-title {
+} */
+
+.services-title,
+.booking-title,
+.contacts-title {
+  color: var(--white-color);
+}
+
+.services-title,
+.barbers-title,
+.portfolio-text {
+  margin-bottom: 44px;
+}
+
+.services-lists-wrap {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 44px;
+}
+
+.services-list {
+  padding: 30px 20px;
+  width: 570px;
+}
+
+.list-1 {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.list-2 {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.services-item {
+  display: flex;
+  justify-content: space-between;
+  color: var(--first-title-color);
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+}
+
+.services-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+/* --- PERKS --- */
+
+.perks {
+  padding-top: 120px;
+  padding-bottom: 155px;
+}
+
+.perks-cont {
+  padding-left: 69px;
+  padding-right: 101px;
+}
+
+.perks-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 370px;
+  gap: 30px;
+}
+
+.perks-item:nth-child(even) {
+  position: relative;
+  top: 35px;
+}
+
+.perks-item {
+  width: 170px;
+  padding: 20px 24px;
+  background-color: var(--numbers-bgc-color);
+  text-align: center;
+}
+
+.perks-number {
+  color: var(--second-text-color);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: calc(57 / 42);
+  letter-spacing: 0.05em;
+}
+
+.perks-flex-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 130px;
+}
+
+.perks-text {
+  width: 122px;
+  color: var(--second-text-color);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: calc(15 / 11);
+}
+
+/* --- BARBERS --- */
+.barbers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.barbers-pre-title {
+  color: var(--second-text-color);
+}
+
+.barbers-title {
+  font-family: "Raleway", sans-serif;
+  color: var(--second-text-color);
+  font-size: 42px;
+  line-height: calc(50 / 42);
+  letter-spacing: 0.05em;
+}
+
+.barbers-list {
+  display: flex;
+  gap: 30px;
+}
+
+.barbers-item {
+  text-align: center;
+  width: calc((100% - 60px) / 3);
+}
+
+.barbers-photo {
+  margin-bottom: 30px;
+}
+
+.barbers-card-title {
+  color: var(--second-text-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: calc(24.5 / 18);
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.barbers-card-text {
+  color: var(--accent-color);
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  letter-spacing: 0.02em;
+}
+
+/* --- PORTFOLIO --- */
+.portfolio {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.portfolio-text {
+  color: var(--second-text-color);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: calc(15 / 11);
+  text-transform: uppercase;
+}
+
+.portfolio-list {
+  display: flex;
+  gap: 30px;
+}
+
+.portfolio-item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
+/* --- CONTACTS --- */
+.bottom-wrap {
+  display: flex;
+  padding-top: 130px;
+  padding-bottom: 111px;
+}
+
+.booking,
+.contacts {
+  flex-basis: 50%;
+}
+
+.contacts-title {
+  margin-bottom: 40px;
+}
+
+.contacts-list {
+  font-style: normal;
+  margin-bottom: 70px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contacts-link-address,
+.contacts-link-tel,
+.contacts-link-email {
+  color: var(--first-title-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+}
+
+.contacts-link-tel {
+  font-weight: 400;
+}
+
+.contacts-link-email {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.contacts-hours {
+  color: var(--white-color);
+}
+
+.copyright {
+  color: var(--first-title-color);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+}
+
+/* --- FOOTER --- */
+footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
 }
